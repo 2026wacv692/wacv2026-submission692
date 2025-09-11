@@ -1,28 +1,6 @@
-# More is Better: Multi-Modal Guided Multi-Source Learning for Object Detection
+# Multi-Modal Guided Multi-Source Domain Adaptation for Object Detection
 
-This is the official PyTorch implementation of More is Better (Under Review).
-
-[**Paper**](docs/main.pdf)
-
-> **More is Better: Multi-Modal Guided Multi-Source Learning for Object Detection** <br>
-> [Sangin Lee](https://sites.google.com/rcv.sejong.ac.kr/silee/), [Seokjun Kwon](https://sukzoon1234.github.io), [Jeongmin Shin](https://sites.google.com/view/jeongminshin), [Namil Kim](https://scholar.google.com/citations?hl=en&user=IYyLBQYAAAAJ), and [Yukyung Choi](https://scholar.google.com/citations?user=vMrPtrAAAAAJ&hl=en) <br>
-
-<p align="center">
-<img src="docs/concept.png" width=80% height=80%
-class="center">
-</p>
-
-## Overview
-
-We introduce multi-source learning (MSL) to encompass both multi-source domain generalization (MSDG) and multi-source domain adaptation (MSDA). To this end, we propose the Multi-Source Detector with Depth and Prompt (MS-DePro), which consists of (1) depth-guided localization and (2) multi-modal guided prompt learning. Our contributions are summarized as follows:
-
-- We propose Multi-Source Learning to generalize or adapt object detection from multiple sources. To the best of our knowledge, this is the first work to encompass both generalization and adaptation for object detection.
-- We develop a VLM-based framework, termed MS-DePro, based on depth-guided localization and multi-modal guided prompt learning to learn domain-agnostic and domain-specific representations for object detection.
-- We conduct extensive experiments on multiple MSL benchmarks. MS-DePro outperforms the state-of-the-art methods in both MSDG and MSDA, demonstrating its strong generalization and adaptation capabilities.
-
-## Updates
-* [04/05/2025] We released code for our MS-DePro!
-* [TODO] We will release checkpoints and visualization code.
+This is the official PyTorch implementation of MS-DePro (WACV Under Review).
 
 ## Outline
 
@@ -48,7 +26,7 @@ See [`MODEL_ZOO.md`](./MODEL_ZOO.md) for our pretrained models.
 
 ## Training
 
-Our MS-DePro is built with [Detectron2](https://github.com/facebookresearch/detectron2). See [Getting Started with Detectron2](https://detectron2.readthedocs.io/en/latest/tutorials/getting_started.html) to learn about basic usage. We provide an example below for training our object detector on MSL settings.
+Our MS-DePro is built with [Detectron2](https://github.com/facebookresearch/detectron2). See [Getting Started with Detectron2](https://detectron2.readthedocs.io/en/latest/tutorials/getting_started.html) to learn about basic usage. We provide an example below for training our object detector on MSDA and MSDG settings.
 
 <details>
 
@@ -101,7 +79,7 @@ sh dist_train.sh configs/MSDA/cross_time.sh 4 0,1,2,3 8 2 8 output/cross_time
 
 ## Inference
 
-We provide an example below for evaluating our object detector on MSL settings.
+We provide an example below for evaluating our object detector on MSDA and MSDG settings.
 
 <details>
 
