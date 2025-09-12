@@ -14,7 +14,7 @@ GPU: NVIDIA RTX A6000(48G)x4
 
 ### Docker
 ```
-git clone git@github.com:sejong-rcv/More-is-Better.git
+git clone git@github.com:2026wacv692/wacv2026-submission692.git
 # build docker image & make container
 cd docker
 make docker-make
