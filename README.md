@@ -9,8 +9,7 @@ This is the official PyTorch implementation of MS-DePro (WACV Under Review).
 3. [Model Zoo](#Model-Zoo)
 4. [Training](#Training)
 5. [Inference](#Inference)
-6. [Main Results](#Main-Results)
-7. [Acknowledgement](#Acknowledgement)
+6. [Acknowledgement](#Acknowledgement)
 
 ## Installation
 
