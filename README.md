@@ -131,4 +131,4 @@ sh slurm_test.sh configs/MSDA/cross_time.yaml 1 0 1 2 output/cross_time.pth eval
 </details>
 
 ## Acknowledgement
-This repository was built on top of [Detectron2](https://github.com/facebookresearch/detectron2), [RegionCLIP](https://github.com/microsoft/RegionCLIP), and [DAPrompt](https://github.com/LeapLabTHU/DAPrompt). We are grateful for the contributions from our community.
+This repository was built on top of [Detectron2](https://github.com/facebookresearch/detectron2), [RegionCLIP](https://github.com/microsoft/RegionCLIP), [ACIA](https://github.com/imatif17/ACIA) and [DAPrompt](https://github.com/LeapLabTHU/DAPrompt). We are grateful for the contributions from our community.
