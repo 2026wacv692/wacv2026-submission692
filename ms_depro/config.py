@@ -114,7 +114,7 @@ def add_cfg(cfg):
     # Multi-Modal Guided Learnable Prompt options
     # ---------------------------------------------------------------------------- #
     _C.MODEL.CLIP.LEARNABLE_PROMPT = True # Set learnable text prompts if true.
-    _C.MODEL.CLIP.CSC = False # Convert domain-agnostic tokens to class-specific if true.
+    _C.MODEL.CLIP.CSC = False # Convert domain-specific tokens to class-specific if true.
     _C.MODEL.CLIP.AGNOSTICNET = True
     _C.MODEL.CLIP.AGNOSTICNET_FROM_BBOX = False
     _C.MODEL.CLIP.SPECIFICNET = True
