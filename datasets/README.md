@@ -1,6 +1,6 @@
 # Prepare Datasets
 
-We outline the dataset setup process for MSL.
+We outline the dataset setup process for MSDA & MSDG.
 
 The following instruction is based on [Detectron2](https://github.com/facebookresearch/detectron2/blob/main/datasets/README.md).
 
@@ -29,9 +29,9 @@ If left unset, the default is `./datasets` relative to your current working dire
 
 A total of 14 datasets are needed in MSL for conducting experiments on both MSDG and MSDA.
 
-- Download datasets for [Diverse Weather Domain Generalization](https://github.com/AmingWu/Single-DGOD?tab=readme-ov-file) and [Real to Artistic Domain Generalization](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets).
-
 - Download datasets for [BDD100K](http://bdd-data.berkeley.edu/), [Cityscapes](https://www.cityscapes-dataset.com/), [KITTI](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d), [COCO](https://cocodataset.org/#download), and [Synscapes](https://synscapes.on.liu.se/download.html).
+
+- Download datasets for [Diverse Weather Domain Generalization](https://github.com/AmingWu/Single-DGOD?tab=readme-ov-file) and [Real to Artistic Domain Generalization](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets).
 
 ## Expected overall dataset structure:
 ```
