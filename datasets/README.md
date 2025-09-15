@@ -58,6 +58,86 @@ datasets/
   Watercolor/
 ```
 
+## Expected dataset structure for [BDD100K](http://bdd-data.berkeley.edu/):
+```
+BDD100K/
+  Daytime/
+    Annotations/
+    ImageSets/
+      Main/
+        train.txt
+        val.txt
+        # train.txt or test.txt, if you use these splits
+    JPEGImages/
+    depthImages/
+  Night/
+    Annotations/
+    ImageSets/
+      Main/
+        train.txt
+        val.txt
+    JPEGImages/
+    depthImages/
+  DawnDusk/
+    Annotations/
+    ImageSets/
+      Main/
+        train.txt
+        val.txt
+    JPEGImages/
+    depthImages/
+```
+
+## Expected dataset structure for [Cityscapes](https://www.cityscapes-dataset.com/):
+```
+Cityscapes/
+  gtFine/
+    train/
+      aachen/
+        color.png, instanceIds.png, labelIds.png, polygons.json,
+        labelTrainIds.png
+      ...
+    val/
+    test/
+  leftImg8bit/
+    train/
+    val/
+    test/
+  ImageSets/
+    train.txt
+    val.txt
+    test.txt
+    caronly_{train,val}.txt
+    # caronly is required for cross-camera training
+  depthImages/
+    train/
+      aachen/
+        color.png
+```
+
+## Expected dataset structure for [KITTI](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d):
+```
+KITTI/
+  Annotations/
+  ImageSets/
+    Main/
+      train.txt
+      trainval.txt
+      val.txt
+  JPEGImages/
+  depthImages/
+```
+
+## Expected dataset structure for [Synscapes](https://synscapes.on.liu.se/download.html):
+```
+Synscapes/
+  img/
+    class/
+    depth/
+    instance/
+    rgb/
+    rgb-2k/
+  meta/
 
 ## Expected dataset structure for [Diverse Weather](https://github.com/AmingWu/Single-DGOD?tab=readme-ov-file):
 
@@ -176,87 +256,6 @@ Watercolor/
   JPEGImages/
   depthImages/
 ```
-
-## Expected dataset structure for [BDD100K](http://bdd-data.berkeley.edu/):
-```
-BDD100K/
-  Daytime/
-    Annotations/
-    ImageSets/
-      Main/
-        train.txt
-        val.txt
-        # train.txt or test.txt, if you use these splits
-    JPEGImages/
-    depthImages/
-  Night/
-    Annotations/
-    ImageSets/
-      Main/
-        train.txt
-        val.txt
-    JPEGImages/
-    depthImages/
-  DawnDusk/
-    Annotations/
-    ImageSets/
-      Main/
-        train.txt
-        val.txt
-    JPEGImages/
-    depthImages/
-```
-
-## Expected dataset structure for [Cityscapes](https://www.cityscapes-dataset.com/):
-```
-Cityscapes/
-  gtFine/
-    train/
-      aachen/
-        color.png, instanceIds.png, labelIds.png, polygons.json,
-        labelTrainIds.png
-      ...
-    val/
-    test/
-  leftImg8bit/
-    train/
-    val/
-    test/
-  ImageSets/
-    train.txt
-    val.txt
-    test.txt
-    caronly_{train,val}.txt
-    # caronly is required for cross-camera training
-  depthImages/
-    train/
-      aachen/
-        color.png
-```
-
-## Expected dataset structure for [KITTI](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d):
-```
-KITTI/
-  Annotations/
-  ImageSets/
-    Main/
-      train.txt
-      trainval.txt
-      val.txt
-  JPEGImages/
-  depthImages/
-```
-
-## Expected dataset structure for [Synscapes](https://synscapes.on.liu.se/download.html):
-```
-Synscapes/
-  img/
-    class/
-    depth/
-    instance/
-    rgb/
-    rgb-2k/
-  meta/
     {1-25000}.json
   depthImages/
     {1-25000}.png
