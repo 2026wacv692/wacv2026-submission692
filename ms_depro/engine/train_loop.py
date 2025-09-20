@@ -22,17 +22,17 @@ from detectron2.evaluation import verify_results, DatasetEvaluators
 
 from ms_depro.data import MetadataCatalog
 from ms_depro.data.build import (
-    build_msl_detection_train_loader,
+    build_ms_detection_train_loader,
     build_detection_test_loader
 )
-from ms_depro.data.dataset_mapper import MSLDatasetMapper
+from ms_depro.data.dataset_mapper import MSDatasetMapper
 from ms_depro.modeling.meta_arch.ts_ensemble import EnsembleTSModel
 from ms_depro.checkpoint.detection_ts_checkpoint import DetectionTSCheckpointer
 from ms_depro.solver.build import build_lr_scheduler
 from ms_depro.evaluation import COCOEvaluator
 
 
-class MSLTrainer(DefaultTrainer):
+class MSTrainer(DefaultTrainer):
     def __init__(self, cfg):
         cfg = DefaultTrainer.auto_scale_workers(cfg, comm.get_world_size())
         
@@ -100,8 +100,8 @@ class MSLTrainer(DefaultTrainer):
     
     @classmethod
     def build_train_loader(cls, cfg, ind=0, is_source=True):
-        map_func = MSLDatasetMapper(cfg, is_train=True)
-        return build_msl_detection_train_loader(cfg, map_func, ind, is_source)
+        map_func = MSDatasetMapper(cfg, is_train=True)
+        return build_ms_detection_train_loader(cfg, map_func, ind, is_source)
     
     @classmethod
     def build_model(cls, cfg):
