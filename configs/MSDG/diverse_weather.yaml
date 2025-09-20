@@ -45,6 +45,6 @@ DATASETS:
 DATALOADER:
   CLASS: ('bus' ,'bike', 'car', 'motor', 'person', 'rider' ,'truck')
 TEST:
-  MSL_MODE: "MSDG"
+  MODE: "MSDG"
   PERIOD_STUDENT: 1000
   PERIOD_TEACHER: 1000
