@@ -18,11 +18,11 @@ from ..fusion import avg_proposal, weighted_proposal
 from ..postprocessing import detector_postprocess
 
 
-__all__ = ["MSLCLIPRCNN"]
+__all__ = ["MSCLIPRCNN"]
 
 
 @META_ARCH_REGISTRY.register()
-class MSLCLIPRCNN(nn.Module):
+class MSCLIPRCNN(nn.Module):
     @configurable
     def __init__(
         self,
@@ -506,7 +506,7 @@ class MSLCLIPRCNN(nn.Module):
 
         if do_postprocess:
             assert not torch.jit.is_scripting(), "Scripting is not supported for postprocess."
-            return MSLCLIPRCNN._postprocess(results, batched_inputs)
+            return MSCLIPRCNN._postprocess(results, batched_inputs)
         else:
             return results
         
