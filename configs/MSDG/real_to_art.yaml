@@ -45,6 +45,6 @@ DATASETS:
 DATALOADER:
   CLASS: ("bicycle", "bird", "car", "cat", "dog", "person", "aeroplane", "boat", "bottle", "bus", "chair", "cow", "diningtable", "horse", "motorbike", "pottedplant", "sheep", "sofa", "train", "tvmonitor")
 TEST:
-  MSL_MODE: "MSDG"
+  MODE: "MSDG"
   PERIOD_STUDENT: 1000
   PERIOD_TEACHER: 1000
