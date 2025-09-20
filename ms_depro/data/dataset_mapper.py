@@ -1,5 +1,3 @@
-
-
 # Copyright (c) Facebook, Inc. and its affiliates.
 import os
 import copy
@@ -204,7 +202,7 @@ class DatasetMapper:
         return dataset_dict
 
 
-class MSLDatasetMapper(DatasetMapper):
+class MSDatasetMapper(DatasetMapper):
     """
     This customized mapper produces two augmented images from a single image instance. 
     This mapper makes sure that the two augmented images have the same
@@ -244,7 +242,7 @@ class MSLDatasetMapper(DatasetMapper):
         self.corrupt_augmentation = build_corrupt_augmentation(cfg, self.is_train)
 
         # fmt: off
-        self.msl = cfg.TEST.MSL_MODE
+        self.ms = cfg.TEST.MODE
         self.img_format = cfg.INPUT.FORMAT
         self.mask_on = cfg.MODEL.MASK_ON
         self.mask_format = cfg.INPUT.MASK_FORMAT
@@ -356,15 +354,15 @@ class MSLDatasetMapper(DatasetMapper):
         # This ensures that the same augmentation randomness
         # is applied to both images.
         state = torch.get_rng_state()
-        if self.msl == "MSDA":
+        if self.ms == "MSDA":
             image_strong_aug = np.array(self.strong_augmentation(image_pil))
-        elif self.msl == "MSDG":
+        elif self.ms == "MSDG":
             image_strong_aug = np.array(self.corrupt_augmentation(image_pil))
 
         torch.set_rng_state(state) 
-        if self.msl == "MSDA":
+        if self.ms == "MSDA":
             depth_map_strong_aug = np.array(self.strong_augmentation(depth_map_pil))
-        elif self.msl == "MSDG":
+        elif self.ms == "MSDG":
             depth_map_strong_aug = np.array(self.corrupt_augmentation(depth_map_pil))
         
         dataset_dict["image"] = torch.as_tensor(
