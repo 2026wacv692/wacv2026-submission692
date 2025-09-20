@@ -23,14 +23,6 @@ nvidia-docker run -it \ -v $PWD:/workspace ms-depro:maintainer \ /bin/bash
 ```
 
 
-### Conda
-
-You can find all required dependencies in [environment.yaml](./environment.yaml).
-```
-conda env create -f environment.yml
-conda activate ms-depro
-```
-
 ### Quick Start
 ```
 # install Detectron2
