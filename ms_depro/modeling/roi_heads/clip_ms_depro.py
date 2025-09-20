@@ -32,7 +32,7 @@ class TextEncoder(nn.Module):
         return x
 
 
-class MSLPromptLearner(nn.Module):
+class MSPromptLearner(nn.Module):
     def __init__(self, 
                  classnames, 
                  language_encoder, 
@@ -232,15 +232,16 @@ class ReturnLearnablePrompt(nn.Module):
                  ):
         super().__init__()
         
-        self.prompt_learner = MSLPromptLearner(classnames, 
-                                               language_encoder, 
-                                               csc, 
-                                               agnosticnet, 
-                                               specificnet, 
-                                               specificnet_from_bbox, 
-                                               specificnet_test_with_buffer, 
-                                               metanet_shallow_features, 
-                                               learnable_bg)
+        self.prompt_learner = MSPromptLearner(classnames, 
+                                              language_encoder, 
+                                              csc, 
+                                              agnosticnet, 
+                                              specificnet, 
+                                              specificnet_from_bbox, 
+                                              specificnet_test_with_buffer, 
+                                              metanet_shallow_features, 
+                                              learnable_bg
+        )
         
         self.tokenized_prompts = self.prompt_learner.tokenized_prompts
         self.text_encoder = TextEncoder(language_encoder)
