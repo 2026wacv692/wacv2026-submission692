@@ -155,7 +155,7 @@ def get_detection_dataset_dicts(
     return dataset_dicts
 
 
-def build_msl_batch_dataloader(
+def build_ms_batch_dataloader(
     dataset, sampler, total_batch_size, *, aspect_ratio_grouping=False, num_workers=0
     ):
     world_size = get_world_size()
@@ -185,7 +185,7 @@ def build_msl_batch_dataloader(
         raise NotImplementedError("ASPECT_RATIO_GROUPING=False is not supported yet")
 
 
-def build_msl_detection_train_loader(
+def build_ms_detection_train_loader(
     cfg, map_func=None, ind=0, is_source=True
     ):
         if is_source: # (labeled) source dataset
@@ -208,7 +208,7 @@ def build_msl_detection_train_loader(
                 raise NotImplementedError("{} not yet supported.".format(sampler_name))
             else:
                 raise ValueError("Unknown training sampler: {}".format(sampler_name))
-            return build_msl_batch_dataloader(
+            return build_ms_batch_dataloader(
                 label_dataset,
                 label_sampler,
                 cfg.SOLVER.IMG_PER_BATCH_LABEL,
@@ -235,7 +235,7 @@ def build_msl_detection_train_loader(
                 raise NotImplementedError("{} not yet supported.".format(sampler_name))
             else:
                 raise ValueError("Unknown training sampler: {}".format(sampler_name))
-            return build_msl_batch_dataloader(
+            return build_ms_batch_dataloader(
                 unlabel_dataset,
                 unlabel_sampler,
                 cfg.SOLVER.IMG_PER_BATCH_UNLABEL,
