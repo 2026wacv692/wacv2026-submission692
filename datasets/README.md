@@ -27,7 +27,7 @@ If left unset, the default is `./datasets` relative to your current working dire
 
 ## Download Datasets
 
-A total of 14 datasets are needed in MSL for conducting experiments on both MSDG and MSDA.
+A total of 14 datasets are needed in MSDA & MSDG for conducting experiments on both MSDG and MSDA.
 
 - Download datasets for [BDD100K](http://bdd-data.berkeley.edu/), [Cityscapes](https://www.cityscapes-dataset.com/), [KITTI](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d), [COCO](https://cocodataset.org/#download), and [Synscapes](https://synscapes.on.liu.se/download.html).
 
