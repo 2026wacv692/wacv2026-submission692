@@ -15,7 +15,7 @@ from .clip_roi_heads import (
 )
 from .clip_ms_depro import (
     TextEncoder,
-    MSLPromptLearner,
+    MSPromptLearner,
     ReturnLearnablePrompt
 )
 from .fast_rcnn import FastRCNNOutputLayers
