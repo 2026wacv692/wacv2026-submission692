@@ -1,6 +1,6 @@
 # Prepare Datasets
 
-We outline the dataset setup process for MSDA & MSDG.
+We outline the dataset setup process for Multi-Source Domain Adaptation (MSDA) & Multi-Source Domain Generalization (MSDG).
 
 The following instruction is based on [Detectron2](https://github.com/facebookresearch/detectron2/blob/main/datasets/README.md).
 
