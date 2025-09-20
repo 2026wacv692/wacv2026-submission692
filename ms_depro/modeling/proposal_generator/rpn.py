@@ -534,7 +534,7 @@ class RPN(nn.Module):
 
 
 @PROPOSAL_GENERATOR_REGISTRY.register()
-class MSLRPN(RPN):
+class MSRPN(RPN):
     """
     Region Proposal Network, introduced by :paper:`Faster R-CNN`.
     """
